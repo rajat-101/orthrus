@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    {% for i in mythril_results %}
+        <header>
+            <h2>Analysis of {{ i.contract }}.sol</h2>
+        </header>
+        <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td align="center">Title</td>
+                        <td align="center">Description</td>
+                        <td>In line</td>
+                    </tr>
+                </thead>
+                {% for j in i.analysis.issues %}
+                <tr>
+                    <td align="left">{{ j.title }}</td>
+                    <td align="left">{{ j.description }}</td>
+                    <td>{{ j.lineno }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+    {% endfor %}
+{% endblock %}

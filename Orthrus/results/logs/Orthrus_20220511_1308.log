@@ -1,0 +1,3 @@
+Arguments passed: ['orthrus.py', '--tool', 'all', '--file', 'dataset/bad_randomness/lottery.sol']
+Analysis completed. 
+It took 13s to analyse all files.

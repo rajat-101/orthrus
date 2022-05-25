@@ -1,0 +1,82 @@
+{
+  "analysis": [
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "Overflow.add (/data/integer_overflow_1.sol#12-18) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "Overflow",
+            "source_mapping": {
+              "filename": "/data/integer_overflow_1.sol",
+              "length": 429,
+              "lines": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "start": 196
+            },
+            "type": "contract"
+          },
+          "name": "add",
+          "source_mapping": {
+            "filename": "/data/integer_overflow_1.sol",
+            "length": 220,
+            "lines": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            "start": 257
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "solc-version",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /data/integer_overflow_1.sol:\n\t- pragma solidity^0.4.15 (/data/integer_overflow_1.sol#7): it allows old versions\n",
+      "elements": [
+        {
+          "expression": "^0.4.15",
+          "source_mapping": {
+            "filename": "/data/integer_overflow_1.sol",
+            "length": 24,
+            "lines": [
+              7
+            ],
+            "start": 169
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    }
+  ],
+  "contract": "integer_overflow_1",
+  "duration": 3.257967472076416,
+  "end": 1652254560.9099743,
+  "start": 1652254557.6520069,
+  "tool": "slither"
+}

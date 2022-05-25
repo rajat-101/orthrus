@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "dataset/arithmetic/integer_overflow_1.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "logicalLocations": [
+        {
+          "kind": "function",
+          "name": "add(uint256)"
+        }
+      ],
+      "results": [
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "add(uint256)"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/arithmetic/integer_overflow_1.sol"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "sellerBalance += value"
+                  },
+                  "startLine": 14
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Integer Overflow "
+          },
+          "ruleId": "Arithmetic_4"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Mythril analyses EVM bytecode using symbolic analysis, taint analysis and control flow checking to detect a variety of security vulnerabilities."
+          },
+          "informationUri": "https://mythx.io/",
+          "name": "Mythril",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "A possible integer overflow exists in the function `add(uint256)`.\nThe addition or multiplication may result in a value higher than the maximum representable integer."
+              },
+              "id": "Arithmetic_4",
+              "name": "ArithmeticVulnerability",
+              "shortDescription": {
+                "text": "Integer Overflow"
+              }
+            }
+          ],
+          "version": "0.4.25"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

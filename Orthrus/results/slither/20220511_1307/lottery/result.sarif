@@ -1,0 +1,415 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "dataset/bad_randomness/lottery.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "makeBet"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Lottery"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 51,
+                  "startLine": 34
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 38,
+                  "snippet": {
+                    "text": "won = (block.number % 2) == 0"
+                  },
+                  "startLine": 38
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "incorrect-equality"
+          },
+          "ruleId": "Other_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 30,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 48,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 48
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 55,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 55
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 64,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 64
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 66,
+                  "snippet": {
+                    "text": "suicide(address)(organizer)"
+                  },
+                  "startLine": 66
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "fallback"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Lottery"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 31,
+                  "startLine": 29
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "makeBet"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Lottery"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 51,
+                  "startLine": 34
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "getBets"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Lottery"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 60,
+                  "startLine": 54
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "destroy"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Lottery"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 67,
+                  "startLine": 63
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 9,
+                  "snippet": {
+                    "text": "^0.4.0"
+                  },
+                  "startLine": 9
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "Lottery"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/lottery.sol"
+                },
+                "region": {
+                  "endLine": 26,
+                  "startLine": 24
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "Lottery.makeBet (/data/lottery.sol#34-51) uses a dangerous strict equality:\n\t- won = (block.number % 2) == 0\n"
+              },
+              "id": "Other_11",
+              "name": "OtherVulnerability",
+              "shortDescription": {
+                "text": "incorrect-equality"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Deprecated standard detected @ /data/lottery.sol#30:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n"
+              },
+              "id": "Ignore_8",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "deprecated-standards"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Lottery.fallback (/data/lottery.sol#29-31) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/lottery.sol:\n\t- pragma solidity^0.4.0 (/data/lottery.sol#9): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Function 'Lottery.Lottery' (/data/lottery.sol#24-26) is not in mixedCase\n"
+              },
+              "id": "Ignore_12",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "naming-convention"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

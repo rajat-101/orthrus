@@ -1,0 +1,170 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "dataset/short_addresses/short_address_example.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "sendCoin"
+                },
+                {
+                  "kind": "contract",
+                  "name": "MyToken"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/short_addresses/short_address_example.sol"
+                },
+                "region": {
+                  "endLine": 24,
+                  "startLine": 18
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "getBalance"
+                },
+                {
+                  "kind": "contract",
+                  "name": "MyToken"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/short_addresses/short_address_example.sol"
+                },
+                "region": {
+                  "endLine": 28,
+                  "startLine": 26
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/short_addresses/short_address_example.sol"
+                },
+                "region": {
+                  "endLine": 7,
+                  "snippet": {
+                    "text": "^0.4.11"
+                  },
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "MyToken"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/short_addresses/short_address_example.sol"
+                },
+                "region": {
+                  "endLine": 16,
+                  "startLine": 14
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "MyToken.sendCoin (/data/short_address_example.sol#18-24) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/short_address_example.sol:\n\t- pragma solidity^0.4.11 (/data/short_address_example.sol#7): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Function 'MyToken.MyToken' (/data/short_address_example.sol#14-16) is not in mixedCase\n"
+              },
+              "id": "Ignore_12",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "naming-convention"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

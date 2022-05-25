@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {% for i in slither_results %}
+        <header>
+            <h2 align="center" style="font-family: sans-serif;">Analysis of {{ i.contract }}.sol</h2>
+        </header>
+        <br>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <td align="center">Title</td>
+                    <td align="center">Description</td>
+                    <td>Impact</td>
+                </tr>
+            </thead>
+            {% for j in i.analysis %}
+                <tr>
+                    <td align="left">{{ j.check }}</td>
+                    <td align="left">{{ j.description }}</td>
+                    <td>{{ j.impact }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endfor %}
+    <div align="center">
+        <form action="download" method="post" style="width: 300px; margin: 20px; height: 50px; border: none; border-radius: 10px; font-family: sans-serif;
+                font-size: 1.3em;
+                text-align: center">
+            <input type="submit" align="center" value="Download Results">
+        </form>
+    </div>
+{% endblock content %}

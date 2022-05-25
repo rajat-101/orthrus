@@ -1,0 +1,217 @@
+{
+  "analysis": [
+    {
+      "check": "arbitrary-send",
+      "confidence": "Medium",
+      "description": "lottopollo.payOut (/data/lottopollo.sol#11-24) sends eth to arbitrary user\n\tDangerous calls:\n\t- leader.send(this.balance) (/data/lottopollo.sol#17)\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "lottopollo",
+            "source_mapping": {
+              "filename": "/data/lottopollo.sol",
+              "length": 645,
+              "lines": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+              ],
+              "start": 187
+            },
+            "type": "contract"
+          },
+          "name": "payOut",
+          "source_mapping": {
+            "filename": "/data/lottopollo.sol",
+            "length": 343,
+            "lines": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            "start": 250
+          },
+          "type": "function"
+        },
+        {
+          "expression": "leader.send(this.balance)",
+          "source_mapping": {
+            "filename": "/data/lottopollo.sol",
+            "length": 27,
+            "lines": [
+              17
+            ],
+            "start": 451
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "High"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "lottopollo.draw (/data/lottopollo.sol#29-32) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "lottopollo",
+            "source_mapping": {
+              "filename": "/data/lottopollo.sol",
+              "length": 645,
+              "lines": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+              ],
+              "start": 187
+            },
+            "type": "contract"
+          },
+          "name": "draw",
+          "source_mapping": {
+            "filename": "/data/lottopollo.sol",
+            "length": 91,
+            "lines": [
+              29,
+              30,
+              31,
+              32
+            ],
+            "start": 739
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "solc-version",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /data/lottopollo.sol:\n\t- pragma solidity^0.4.0 (/data/lottopollo.sol#7): it allows old versions\n",
+      "elements": [
+        {
+          "expression": "^0.4.0",
+          "source_mapping": {
+            "filename": "/data/lottopollo.sol",
+            "length": 23,
+            "lines": [
+              7
+            ],
+            "start": 163
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "naming-convention",
+      "confidence": "High",
+      "description": "Contract 'lottopollo' (/data/lottopollo.sol#8-33) is not in CapWords\n",
+      "elements": [
+        {
+          "convention": "CapWords",
+          "name": "lottopollo",
+          "source_mapping": {
+            "filename": "/data/lottopollo.sol",
+            "length": 645,
+            "lines": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33
+            ],
+            "start": 187
+          },
+          "target": "contract"
+        }
+      ],
+      "impact": "Informational"
+    }
+  ],
+  "contract": "lottopollo",
+  "duration": 5.026790618896484,
+  "end": 1652946831.5889564,
+  "start": 1652946826.5621657,
+  "tool": "slither"
+}

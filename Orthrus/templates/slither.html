@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    {% for i in slither_results %}
+        <header>
+            <h2>Analysis {{ i.contract }}.sol</h2>
+        </header>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td align="center">Title</td>
+                    <td align="center">Description</td>
+                    <td>Confidence</td>
+                </tr>
+            </thead>
+            {% for j in i.analysis %}
+                <tr>
+                    <td align="left">{{ j.check }}</td>
+                    <td align="left">{{ j.description }}</td>
+                    <td>{{ j.confidence }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endfor %}
+{% endblock %}

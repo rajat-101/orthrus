@@ -1,0 +1,338 @@
+{
+  "analysis": [
+    {
+      "check": "reentrancy-eth",
+      "confidence": "Medium",
+      "description": "Reentrancy in SimpleDAO.withdraw (/data/simple_dao.sol#16-22):\n\tExternal calls:\n\t- res = msg.sender.call.value(amount)() (/data/simple_dao.sol#19)\n\tState variables written after the call(s):\n\t- credit (/data/simple_dao.sol#20)\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "filename": "/data/simple_dao.sol",
+              "length": 422,
+              "lines": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+              ],
+              "start": 162
+            },
+            "type": "contract"
+          },
+          "name": "withdraw",
+          "source_mapping": {
+            "filename": "/data/simple_dao.sol",
+            "length": 200,
+            "lines": [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            "start": 303
+          },
+          "type": "function"
+        },
+        {
+          "expression": "res = msg.sender.call.value(amount)()",
+          "source_mapping": {
+            "filename": "/data/simple_dao.sol",
+            "length": 42,
+            "lines": [
+              19
+            ],
+            "start": 416
+          },
+          "type": "external_calls"
+        },
+        {
+          "expression": "credit[msg.sender] -= amount",
+          "name": "credit",
+          "source_mapping": {
+            "filename": "/data/simple_dao.sol",
+            "length": 26,
+            "lines": [
+              20
+            ],
+            "start": 466
+          },
+          "type": "variables_written"
+        }
+      ],
+      "impact": "High"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "SimpleDAO.donate (/data/simple_dao.sol#12-14) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "filename": "/data/simple_dao.sol",
+              "length": 422,
+              "lines": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+              ],
+              "start": 162
+            },
+            "type": "contract"
+          },
+          "name": "donate",
+          "source_mapping": {
+            "filename": "/data/simple_dao.sol",
+            "length": 70,
+            "lines": [
+              12,
+              13,
+              14
+            ],
+            "start": 229
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "SimpleDAO.withdraw (/data/simple_dao.sol#16-22) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "filename": "/data/simple_dao.sol",
+              "length": 422,
+              "lines": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+              ],
+              "start": 162
+            },
+            "type": "contract"
+          },
+          "name": "withdraw",
+          "source_mapping": {
+            "filename": "/data/simple_dao.sol",
+            "length": 200,
+            "lines": [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            "start": 303
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "SimpleDAO.queryCredit (/data/simple_dao.sol#24-26) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "filename": "/data/simple_dao.sol",
+              "length": 422,
+              "lines": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+              ],
+              "start": 162
+            },
+            "type": "contract"
+          },
+          "name": "queryCredit",
+          "source_mapping": {
+            "filename": "/data/simple_dao.sol",
+            "length": 75,
+            "lines": [
+              24,
+              25,
+              26
+            ],
+            "start": 507
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "solc-version",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /data/simple_dao.sol:\n\t- pragma solidity^0.4.2 (/data/simple_dao.sol#7): it allows old versions\n",
+      "elements": [
+        {
+          "expression": "^0.4.2",
+          "source_mapping": {
+            "filename": "/data/simple_dao.sol",
+            "length": 23,
+            "lines": [
+              7
+            ],
+            "start": 137
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "low-level-calls",
+      "confidence": "High",
+      "description": "Low level call in SimpleDAO.withdraw (/data/simple_dao.sol#16-22):\n\t-res = msg.sender.call.value(amount)() /data/simple_dao.sol#19\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "filename": "/data/simple_dao.sol",
+              "length": 422,
+              "lines": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+              ],
+              "start": 162
+            },
+            "type": "contract"
+          },
+          "name": "withdraw",
+          "source_mapping": {
+            "filename": "/data/simple_dao.sol",
+            "length": 200,
+            "lines": [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            "start": 303
+          },
+          "type": "function"
+        },
+        {
+          "expression": "res = msg.sender.call.value(amount)()",
+          "source_mapping": {
+            "filename": "/data/simple_dao.sol",
+            "length": 42,
+            "lines": [
+              19
+            ],
+            "start": 416
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    }
+  ],
+  "contract": "simple_dao",
+  "duration": 4.257060527801514,
+  "end": 1652944716.2318897,
+  "start": 1652944711.9748292,
+  "tool": "slither"
+}

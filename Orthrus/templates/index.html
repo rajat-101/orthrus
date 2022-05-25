@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <p class="text-center">View results for</p>
+    <br>
+    <form action="mythril" method="post">
+        <input type="submit" value="Mythril" id="mythril">
+    </form>
+    <form action="slither" method="post">
+        <input type="submit" value="Slither" id="slither">
+    </form>
+    <a href="{{ url_for('upload_form') }}">Upload File</a>
+{% endblock %}

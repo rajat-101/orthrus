@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 align="center">Orthrus</h1>
+    <br>
+    <br>
+    <p align="center" style="font: 1em sans-serif;">
+        Orthrus is a framework for the static analysis of smart contracts.
+    </p>
+    <br>
+    <br>
+    {% if current_user.is_authenticated %}
+    <div align="center">
+        <form action="/upload" method="post" style="width: 300px; margin: 20px; height: 50px; border: none; border-radius: 10px; font-family: sans-serif;
+        font-size: 1.3em;
+        text-align: center">
+            <input type="submit" align="center" value="Upload Smart Contract" id="upload">
+        </form>
+    </div>
+    {% endif %}
+{% endblock content %}

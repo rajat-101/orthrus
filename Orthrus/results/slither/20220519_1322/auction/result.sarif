@@ -1,0 +1,104 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "/auction.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "bid"
+                },
+                {
+                  "kind": "contract",
+                  "name": "DosAuction"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/auction.sol"
+                },
+                "region": {
+                  "endLine": 28,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/auction.sol"
+                },
+                "region": {
+                  "endLine": 7,
+                  "snippet": {
+                    "text": "^0.4.15"
+                  },
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "DosAuction.bid (/data/auction.sol#15-28) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/auction.sol:\n\t- pragma solidity^0.4.15 (/data/auction.sol#7): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

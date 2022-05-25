@@ -1,0 +1,3 @@
+Arguments passed: ['orthrus.py', '--tool', 'all', '--file', 'dataset/short_addresses/short_address_example.sol']
+Analysis completed. 
+It took 14s to analyse all files.

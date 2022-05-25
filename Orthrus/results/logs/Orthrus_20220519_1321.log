@@ -1,0 +1,3 @@
+Arguments passed: ['orthrus.py', '--tool', 'slither', '--dataset', 'my_contracts']
+Analysis completed. 
+It took 4s to analyse all files.

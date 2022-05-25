@@ -1,0 +1,180 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "/roulette.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "error",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "fallback"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Roulette"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/roulette.sol"
+                },
+                "region": {
+                  "endLine": 24,
+                  "startLine": 15
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/roulette.sol"
+                },
+                "region": {
+                  "endLine": 22,
+                  "snippet": {
+                    "text": "msg.sender.transfer(this.balance)"
+                  },
+                  "startLine": 22
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "arbitrary-send"
+          },
+          "ruleId": "AccessControl_19"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "fallback"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Roulette"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/roulette.sol"
+                },
+                "region": {
+                  "endLine": 24,
+                  "startLine": 15
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/roulette.sol"
+                },
+                "region": {
+                  "endLine": 23,
+                  "snippet": {
+                    "text": "now % 15 == 0"
+                  },
+                  "startLine": 21
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "incorrect-equality"
+          },
+          "ruleId": "Other_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "fallback"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Roulette"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/roulette.sol"
+                },
+                "region": {
+                  "endLine": 24,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "Roulette.fallback (/data/roulette.sol#15-24) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(this.balance) (/data/roulette.sol#22)\n"
+              },
+              "id": "AccessControl_19",
+              "name": "AccessControlVulnerability",
+              "shortDescription": {
+                "text": "arbitrary-send"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Roulette.fallback (/data/roulette.sol#15-24) uses a dangerous strict equality:\n\t- now % 15 == 0\n"
+              },
+              "id": "Other_11",
+              "name": "OtherVulnerability",
+              "shortDescription": {
+                "text": "incorrect-equality"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Roulette.fallback (/data/roulette.sol#15-24) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

@@ -1,0 +1,109 @@
+{
+  "analysis": [
+    {
+      "check": "suicidal",
+      "confidence": "High",
+      "description": "SimpleSuicide.sudicideAnyone (/data/simple_suicide.sol#12-14) allows anyone to destruct the contract\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "SimpleSuicide",
+            "source_mapping": {
+              "filename": "/data/simple_suicide.sol",
+              "length": 126,
+              "lines": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              "start": 239
+            },
+            "type": "contract"
+          },
+          "name": "sudicideAnyone",
+          "source_mapping": {
+            "filename": "/data/simple_suicide.sol",
+            "length": 61,
+            "lines": [
+              12,
+              13,
+              14
+            ],
+            "start": 301
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "High"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "SimpleSuicide.sudicideAnyone (/data/simple_suicide.sol#12-14) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "SimpleSuicide",
+            "source_mapping": {
+              "filename": "/data/simple_suicide.sol",
+              "length": 126,
+              "lines": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              "start": 239
+            },
+            "type": "contract"
+          },
+          "name": "sudicideAnyone",
+          "source_mapping": {
+            "filename": "/data/simple_suicide.sol",
+            "length": 61,
+            "lines": [
+              12,
+              13,
+              14
+            ],
+            "start": 301
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "solc-version",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /data/simple_suicide.sol:\n\t- pragma solidity^0.4.0 (/data/simple_suicide.sol#8): it allows old versions\n",
+      "elements": [
+        {
+          "expression": "^0.4.0",
+          "source_mapping": {
+            "filename": "/data/simple_suicide.sol",
+            "length": 23,
+            "lines": [
+              8
+            ],
+            "start": 214
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    }
+  ],
+  "contract": "simple_suicide",
+  "duration": 4.438706874847412,
+  "end": 1652947218.483448,
+  "start": 1652947214.0447412,
+  "tool": "slither"
+}

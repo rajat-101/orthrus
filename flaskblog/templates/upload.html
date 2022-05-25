@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+<br>
+<div class="content-section">
+    <h2>Select a file to upload</h2>
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="file" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</div>
+<br>
+<br>
+<div align="center">
+    <form action="results" method="post" style="width: 300px; margin: 20px; height: 50px; border: none; border-radius: 10px; font-family: sans-serif;
+            font-size: 1.3em;
+            text-align: center">
+        <input type="submit" align="center" value="View Results">
+    </form>
+</div>
+{% endblock content %}

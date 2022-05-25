@@ -1,0 +1,144 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "/simple_suicide.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "error",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "sudicideAnyone"
+                },
+                {
+                  "kind": "contract",
+                  "name": "SimpleSuicide"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/simple_suicide.sol"
+                },
+                "region": {
+                  "endLine": 14,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "suicidal"
+          },
+          "ruleId": "AccessControl_21"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "sudicideAnyone"
+                },
+                {
+                  "kind": "contract",
+                  "name": "SimpleSuicide"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/simple_suicide.sol"
+                },
+                "region": {
+                  "endLine": 14,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/simple_suicide.sol"
+                },
+                "region": {
+                  "endLine": 8,
+                  "snippet": {
+                    "text": "^0.4.0"
+                  },
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "SimpleSuicide.sudicideAnyone (/data/simple_suicide.sol#12-14) allows anyone to destruct the contract\n"
+              },
+              "id": "AccessControl_21",
+              "name": "AccessControlVulnerability",
+              "shortDescription": {
+                "text": "suicidal"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "SimpleSuicide.sudicideAnyone (/data/simple_suicide.sol#12-14) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/simple_suicide.sol:\n\t- pragma solidity^0.4.0 (/data/simple_suicide.sol#8): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

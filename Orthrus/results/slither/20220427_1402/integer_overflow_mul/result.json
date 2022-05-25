@@ -1,0 +1,71 @@
+{
+  "analysis": [
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "IntegerOverflowMul.run (/data/integer_overflow_mul.sol#15-18) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "IntegerOverflowMul",
+            "source_mapping": {
+              "filename": "/data/integer_overflow_mul.sol",
+              "length": 167,
+              "lines": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ],
+              "start": 325
+            },
+            "type": "contract"
+          },
+          "name": "run",
+          "source_mapping": {
+            "filename": "/data/integer_overflow_mul.sol",
+            "length": 103,
+            "lines": [
+              15,
+              16,
+              17,
+              18
+            ],
+            "start": 387
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "solc-version",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /data/integer_overflow_mul.sol:\n\t- pragma solidity^0.4.19 (/data/integer_overflow_mul.sol#10): it allows old versions\n",
+      "elements": [
+        {
+          "expression": "^0.4.19",
+          "source_mapping": {
+            "filename": "/data/integer_overflow_mul.sol",
+            "length": 24,
+            "lines": [
+              10
+            ],
+            "start": 299
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    }
+  ],
+  "contract": "integer_overflow_mul",
+  "duration": 1.6656653881072998,
+  "end": 1651048356.1344876,
+  "start": 1651048354.4688222,
+  "tool": "slither"
+}

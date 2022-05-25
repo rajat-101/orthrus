@@ -1,0 +1,339 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "/ether_lotto.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "error",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "play"
+                },
+                {
+                  "kind": "contract",
+                  "name": "EtherLotto"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 57,
+                  "startLine": 33
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 49,
+                  "snippet": {
+                    "text": "bank.transfer(FEE_AMOUNT)"
+                  },
+                  "startLine": 49
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "arbitrary-send"
+          },
+          "ruleId": "AccessControl_19"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "play"
+                },
+                {
+                  "kind": "contract",
+                  "name": "EtherLotto"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 57,
+                  "startLine": 33
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 56,
+                  "snippet": {
+                    "text": "random == 0"
+                  },
+                  "startLine": 46
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "incorrect-equality"
+          },
+          "ruleId": "Other_11"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "play"
+                },
+                {
+                  "kind": "contract",
+                  "name": "EtherLotto"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 57,
+                  "startLine": 33
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 56,
+                  "snippet": {
+                    "text": "random == 0"
+                  },
+                  "startLine": 46
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "timestamp"
+          },
+          "ruleId": "TimeManipulation_4"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 43,
+                  "snippet": {
+                    "text": "random = uint256(sha3()(block.timestamp)) % 2"
+                  },
+                  "startLine": 43
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "play"
+                },
+                {
+                  "kind": "contract",
+                  "name": "EtherLotto"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 57,
+                  "startLine": 33
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 8,
+                  "snippet": {
+                    "text": "^0.4.15"
+                  },
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "EtherLotto"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/ether_lotto.sol"
+                },
+                "region": {
+                  "endLine": 29,
+                  "startLine": 27
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "EtherLotto.play (/data/ether_lotto.sol#33-57) sends eth to arbitrary user\n\tDangerous calls:\n\t- bank.transfer(FEE_AMOUNT) (/data/ether_lotto.sol#49)\n"
+              },
+              "id": "AccessControl_19",
+              "name": "AccessControlVulnerability",
+              "shortDescription": {
+                "text": "arbitrary-send"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "EtherLotto.play (/data/ether_lotto.sol#33-57) uses a dangerous strict equality:\n\t- random == 0\n"
+              },
+              "id": "Other_11",
+              "name": "OtherVulnerability",
+              "shortDescription": {
+                "text": "incorrect-equality"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "EtherLotto.play (/data/ether_lotto.sol#33-57) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- random == 0 (/data/ether_lotto.sol#46-56)\n"
+              },
+              "id": "TimeManipulation_4",
+              "name": "TimeManipulationVulnerability",
+              "shortDescription": {
+                "text": "timestamp"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Deprecated standard detected @ /data/ether_lotto.sol#43:\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n"
+              },
+              "id": "Ignore_8",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "deprecated-standards"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "EtherLotto.play (/data/ether_lotto.sol#33-57) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/ether_lotto.sol:\n\t- pragma solidity^0.4.15 (/data/ether_lotto.sol#8): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Function 'EtherLotto.EtherLotto' (/data/ether_lotto.sol#27-29) is not in mixedCase\n"
+              },
+              "id": "Ignore_12",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "naming-convention"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

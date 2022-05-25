@@ -1,0 +1,12 @@
+{
+  "analysis": {
+    "error": null,
+    "issues": [],
+    "success": true
+  },
+  "contract": "blackjack",
+  "duration": 3.6119778156280518,
+  "end": 1650380528.4588976,
+  "start": 1650380524.8469198,
+  "tool": "mythril"
+}

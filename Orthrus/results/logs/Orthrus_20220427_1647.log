@@ -1,0 +1,3 @@
+Arguments passed: ['orthrus.py', '--tool', 'all', '--file', 'dataset/reentrancy/simple_dao.sol']
+Analysis completed. 
+It took 21s to analyse all files.

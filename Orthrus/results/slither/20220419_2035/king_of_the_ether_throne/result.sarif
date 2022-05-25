@@ -1,0 +1,415 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "claimThrone"
+                },
+                {
+                  "kind": "contract",
+                  "name": "KingOfTheEtherThrone"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 169,
+                  "startLine": 103
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 135,
+                  "snippet": {
+                    "text": "currentMonarch.etherAddress != wizardAddress"
+                  },
+                  "startLine": 130
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "timestamp"
+          },
+          "ruleId": "TimeManipulation_4"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "numberOfMonarchs"
+                },
+                {
+                  "kind": "contract",
+                  "name": "KingOfTheEtherThrone"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 86,
+                  "startLine": 84
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "fallback"
+                },
+                {
+                  "kind": "contract",
+                  "name": "KingOfTheEtherThrone"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 100,
+                  "startLine": 98
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "sweepCommission"
+                },
+                {
+                  "kind": "contract",
+                  "name": "KingOfTheEtherThrone"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 175,
+                  "startLine": 172
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "transferOwnership"
+                },
+                {
+                  "kind": "contract",
+                  "name": "KingOfTheEtherThrone"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 180,
+                  "startLine": 178
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 24,
+                  "snippet": {
+                    "text": "^0.4.0"
+                  },
+                  "startLine": 24
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "KingOfTheEtherThrone"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 82,
+                  "startLine": 73
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable_constant",
+                  "name": "startingClaimPrice"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 48,
+                  "startLine": 48
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable_constant",
+                  "name": "claimPriceAdjustNum"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 53,
+                  "startLine": 53
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable_constant",
+                  "name": "claimPriceAdjustDen"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 54,
+                  "startLine": 54
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable_constant",
+                  "name": "wizardCommissionFractionNum"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 59,
+                  "startLine": 59
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable_constant",
+                  "name": "wizardCommissionFractionDen"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+                },
+                "region": {
+                  "endLine": 60,
+                  "startLine": 60
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "KingOfTheEtherThrone.claimThrone (/data/king_of_the_ether_throne.sol#103-169) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- currentMonarch.etherAddress != wizardAddress (/data/king_of_the_ether_throne.sol#130-135)\n"
+              },
+              "id": "TimeManipulation_4",
+              "name": "TimeManipulationVulnerability",
+              "shortDescription": {
+                "text": "timestamp"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "KingOfTheEtherThrone.numberOfMonarchs (/data/king_of_the_ether_throne.sol#84-86) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/king_of_the_ether_throne.sol:\n\t- pragma solidity^0.4.0 (/data/king_of_the_ether_throne.sol#24): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Function 'KingOfTheEtherThrone.KingOfTheEtherThrone' (/data/king_of_the_ether_throne.sol#73-82) is not in mixedCase\n"
+              },
+              "id": "Ignore_12",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "naming-convention"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

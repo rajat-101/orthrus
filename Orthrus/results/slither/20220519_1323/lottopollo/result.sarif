@@ -1,0 +1,195 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "/lottopollo.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "error",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "payOut"
+                },
+                {
+                  "kind": "contract",
+                  "name": "lottopollo"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lottopollo.sol"
+                },
+                "region": {
+                  "endLine": 24,
+                  "startLine": 11
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lottopollo.sol"
+                },
+                "region": {
+                  "endLine": 17,
+                  "snippet": {
+                    "text": "leader.send(this.balance)"
+                  },
+                  "startLine": 17
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "arbitrary-send"
+          },
+          "ruleId": "AccessControl_19"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "draw"
+                },
+                {
+                  "kind": "contract",
+                  "name": "lottopollo"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lottopollo.sol"
+                },
+                "region": {
+                  "endLine": 32,
+                  "startLine": 29
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lottopollo.sol"
+                },
+                "region": {
+                  "endLine": 7,
+                  "snippet": {
+                    "text": "^0.4.0"
+                  },
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "contract",
+                  "name": "lottopollo"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lottopollo.sol"
+                },
+                "region": {
+                  "endLine": 33,
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "lottopollo.payOut (/data/lottopollo.sol#11-24) sends eth to arbitrary user\n\tDangerous calls:\n\t- leader.send(this.balance) (/data/lottopollo.sol#17)\n"
+              },
+              "id": "AccessControl_19",
+              "name": "AccessControlVulnerability",
+              "shortDescription": {
+                "text": "arbitrary-send"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "lottopollo.draw (/data/lottopollo.sol#29-32) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/lottopollo.sol:\n\t- pragma solidity^0.4.0 (/data/lottopollo.sol#7): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Contract 'lottopollo' (/data/lottopollo.sol#8-33) is not in CapWords\n"
+              },
+              "id": "Ignore_12",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "naming-convention"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

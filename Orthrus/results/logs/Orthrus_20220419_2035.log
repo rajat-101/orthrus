@@ -1,0 +1,3 @@
+Arguments passed: ['orthrus.py', '--tool', 'all', '--file', 'dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol']
+Analysis completed. 
+It took 12m 43s to analyse all files.

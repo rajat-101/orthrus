@@ -1,0 +1,655 @@
+{
+  "analysis": [
+    {
+      "check": "incorrect-equality",
+      "confidence": "High",
+      "description": "Lottery.makeBet (/data/lottery.sol#34-51) uses a dangerous strict equality:\n\t- won = (block.number % 2) == 0\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "Lottery",
+            "source_mapping": {
+              "filename": "/data/lottery.sol",
+              "length": 1479,
+              "lines": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68
+              ],
+              "start": 302
+            },
+            "type": "contract"
+          },
+          "name": "makeBet",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 615,
+            "lines": [
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51
+            ],
+            "start": 773
+          },
+          "type": "function"
+        },
+        {
+          "expression": "won = (block.number % 2) == 0",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 34,
+            "lines": [
+              38
+            ],
+            "start": 984
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Medium"
+    },
+    {
+      "check": "deprecated-standards",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /data/lottery.sol#30:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "expression": "None",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 5,
+            "lines": [
+              30
+            ],
+            "start": 734
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "deprecated-standards",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /data/lottery.sol#48:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "expression": "None",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 5,
+            "lines": [
+              48
+            ],
+            "start": 1349
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "deprecated-standards",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /data/lottery.sol#55:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "expression": "None",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 5,
+            "lines": [
+              55
+            ],
+            "start": 1496
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "deprecated-standards",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /data/lottery.sol#64:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "expression": "None",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 5,
+            "lines": [
+              64
+            ],
+            "start": 1733
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "deprecated-standards",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /data/lottery.sol#66:\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+      "elements": [
+        {
+          "expression": "suicide(address)(organizer)",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 18,
+            "lines": [
+              66
+            ],
+            "start": 1752
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "Lottery.fallback (/data/lottery.sol#29-31) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "Lottery",
+            "source_mapping": {
+              "filename": "/data/lottery.sol",
+              "length": 1479,
+              "lines": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68
+              ],
+              "start": 302
+            },
+            "type": "contract"
+          },
+          "name": "fallback",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 35,
+            "lines": [
+              29,
+              30,
+              31
+            ],
+            "start": 712
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "Lottery.makeBet (/data/lottery.sol#34-51) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "Lottery",
+            "source_mapping": {
+              "filename": "/data/lottery.sol",
+              "length": 1479,
+              "lines": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68
+              ],
+              "start": 302
+            },
+            "type": "contract"
+          },
+          "name": "makeBet",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 615,
+            "lines": [
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51
+            ],
+            "start": 773
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "Lottery.getBets (/data/lottery.sol#54-60) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "Lottery",
+            "source_mapping": {
+              "filename": "/data/lottery.sol",
+              "length": 1479,
+              "lines": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68
+              ],
+              "start": 302
+            },
+            "type": "contract"
+          },
+          "name": "getBets",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 211,
+            "lines": [
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60
+            ],
+            "start": 1436
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "Lottery.destroy (/data/lottery.sol#63-67) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "Lottery",
+            "source_mapping": {
+              "filename": "/data/lottery.sol",
+              "length": 1479,
+              "lines": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68
+              ],
+              "start": 302
+            },
+            "type": "contract"
+          },
+          "name": "destroy",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 105,
+            "lines": [
+              63,
+              64,
+              65,
+              66,
+              67
+            ],
+            "start": 1673
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "solc-version",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /data/lottery.sol:\n\t- pragma solidity^0.4.0 (/data/lottery.sol#9): it allows old versions\n",
+      "elements": [
+        {
+          "expression": "^0.4.0",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 23,
+            "lines": [
+              9
+            ],
+            "start": 274
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Informational"
+    },
+    {
+      "check": "naming-convention",
+      "confidence": "High",
+      "description": "Function 'Lottery.Lottery' (/data/lottery.sol#24-26) is not in mixedCase\n",
+      "elements": [
+        {
+          "convention": "mixedCase",
+          "name": "Lottery",
+          "source_mapping": {
+            "filename": "/data/lottery.sol",
+            "length": 60,
+            "lines": [
+              24,
+              25,
+              26
+            ],
+            "start": 605
+          },
+          "target": "function"
+        }
+      ],
+      "impact": "Informational"
+    }
+  ],
+  "contract": "lottery",
+  "duration": 2.836548089981079,
+  "end": 1652254729.034382,
+  "start": 1652254726.197834,
+  "tool": "slither"
+}

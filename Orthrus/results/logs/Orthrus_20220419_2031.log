@@ -1,0 +1,3 @@
+Arguments passed: ['orthrus.py', '--tool', 'all', '--file', 'dataset/arithmetic/integer_overflow_1.sol']
+Analysis completed. 
+It took 18s to analyse all files.

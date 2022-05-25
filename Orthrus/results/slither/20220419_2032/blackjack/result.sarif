@@ -1,0 +1,798 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "dataset/bad_randomness/blackjack.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable",
+                  "name": "BLACKJACK"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 51,
+                  "startLine": 51
+                }
+              }
+            },
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable",
+                  "name": "maxBet"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 49,
+                  "startLine": 49
+                }
+              }
+            },
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable",
+                  "name": "minBet"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 48,
+                  "startLine": 48
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "constable-states"
+          },
+          "ruleId": "Ignore_6"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 21,
+                  "snippet": {
+                    "text": "uint8(uint256(keccak256()(block.blockhash(b),player,cardNumber,timestamp)) % 52)"
+                  },
+                  "startLine": 21
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 105,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 105
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 109,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 109
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 171,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 171
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 185,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 184
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 188,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 188
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 224,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 224
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 237,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 237
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 241,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 241
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 273,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 273
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 280,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 280
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 295,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 295
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 71,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 70
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "fallback"
+                },
+                {
+                  "kind": "contract",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 100,
+                  "startLine": 99
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "deal"
+                },
+                {
+                  "kind": "contract",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 133,
+                  "startLine": 101
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "hit"
+                },
+                {
+                  "kind": "contract",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 142,
+                  "startLine": 134
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "stand"
+                },
+                {
+                  "kind": "contract",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 158,
+                  "startLine": 144
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "getPlayerCard"
+                },
+                {
+                  "kind": "contract",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 273,
+                  "startLine": 266
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "getHouseCard"
+                },
+                {
+                  "kind": "contract",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 280,
+                  "startLine": 273
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "getPlayerCardsNumber"
+                },
+                {
+                  "kind": "contract",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 284,
+                  "startLine": 280
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "getHouseCardsNumber"
+                },
+                {
+                  "kind": "contract",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 289,
+                  "startLine": 284
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "getGameState"
+                },
+                {
+                  "kind": "contract",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 308,
+                  "startLine": 289
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 8,
+                  "snippet": {
+                    "text": "^0.4.2"
+                  },
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "BlackJack"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 99,
+                  "startLine": 95
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable",
+                  "name": "BLACKJACK"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dataset/bad_randomness/blackjack.sol"
+                },
+                "region": {
+                  "endLine": 51,
+                  "startLine": 51
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "BlackJack.BLACKJACK should be constant (/data/blackjack.sol#51)\nBlackJack.maxBet should be constant (/data/blackjack.sol#49)\nBlackJack.minBet should be constant (/data/blackjack.sol#48)\n"
+              },
+              "id": "Ignore_6",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "constable-states"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Deprecated standard detected @ /data/blackjack.sol#21:\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n"
+              },
+              "id": "Ignore_8",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "deprecated-standards"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "BlackJack.fallback (/data/blackjack.sol#99-100) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/blackjack.sol:\n\t- pragma solidity^0.4.2 (/data/blackjack.sol#8): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Function 'BlackJack.BlackJack' (/data/blackjack.sol#95-99) is not in mixedCase\n"
+              },
+              "id": "Ignore_12",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "naming-convention"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

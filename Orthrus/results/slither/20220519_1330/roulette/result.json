@@ -1,0 +1,206 @@
+{
+  "analysis": [
+    {
+      "check": "arbitrary-send",
+      "confidence": "Medium",
+      "description": "Roulette.fallback (/data/roulette.sol#15-24) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(this.balance) (/data/roulette.sol#22)\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "Roulette",
+            "source_mapping": {
+              "filename": "/data/roulette.sol",
+              "length": 581,
+              "lines": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25
+              ],
+              "start": 138
+            },
+            "type": "contract"
+          },
+          "name": "fallback",
+          "source_mapping": {
+            "filename": "/data/roulette.sol",
+            "length": 387,
+            "lines": [
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            "start": 330
+          },
+          "type": "function"
+        },
+        {
+          "expression": "msg.sender.transfer(this.balance)",
+          "source_mapping": {
+            "filename": "/data/roulette.sol",
+            "length": 33,
+            "lines": [
+              22
+            ],
+            "start": 667
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "High"
+    },
+    {
+      "check": "incorrect-equality",
+      "confidence": "High",
+      "description": "Roulette.fallback (/data/roulette.sol#15-24) uses a dangerous strict equality:\n\t- now % 15 == 0\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "Roulette",
+            "source_mapping": {
+              "filename": "/data/roulette.sol",
+              "length": 581,
+              "lines": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25
+              ],
+              "start": 138
+            },
+            "type": "contract"
+          },
+          "name": "fallback",
+          "source_mapping": {
+            "filename": "/data/roulette.sol",
+            "length": 387,
+            "lines": [
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            "start": 330
+          },
+          "type": "function"
+        },
+        {
+          "expression": "now % 15 == 0",
+          "source_mapping": {
+            "filename": "/data/roulette.sol",
+            "length": 86,
+            "lines": [
+              21,
+              22,
+              23
+            ],
+            "start": 625
+          },
+          "type": "expression"
+        }
+      ],
+      "impact": "Medium"
+    },
+    {
+      "check": "external-function",
+      "confidence": "High",
+      "description": "Roulette.fallback (/data/roulette.sol#15-24) should be declared external\n",
+      "elements": [
+        {
+          "contract": {
+            "name": "Roulette",
+            "source_mapping": {
+              "filename": "/data/roulette.sol",
+              "length": 581,
+              "lines": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25
+              ],
+              "start": 138
+            },
+            "type": "contract"
+          },
+          "name": "fallback",
+          "source_mapping": {
+            "filename": "/data/roulette.sol",
+            "length": 387,
+            "lines": [
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            "start": 330
+          },
+          "type": "function"
+        }
+      ],
+      "impact": "Informational"
+    }
+  ],
+  "contract": "roulette",
+  "duration": 2.9146223068237305,
+  "end": 1652947221.9693866,
+  "start": 1652947219.0547643,
+  "tool": "slither"
+}

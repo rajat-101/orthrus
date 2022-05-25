@@ -1,0 +1,361 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "/reentrancy_bonus.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "error",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "withdrawReward"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Reentrancy_bonus"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 21,
+                  "startLine": 16
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 19,
+                  "snippet": {
+                    "text": "(success) = recipient.call.value(amountToWithdraw)()"
+                  },
+                  "startLine": 19
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "arbitrary-send"
+          },
+          "ruleId": "AccessControl_19"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "getFirstWithdrawalBonus"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Reentrancy_bonus"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 30,
+                  "startLine": 23
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 28,
+                  "snippet": {
+                    "text": "withdrawReward(recipient)"
+                  },
+                  "startLine": 28
+                }
+              }
+            },
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variables_written",
+                  "name": "claimedBonus"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 29,
+                  "snippet": {
+                    "text": "claimedBonus[recipient] = true"
+                  },
+                  "startLine": 29
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "reentrancy-eth"
+          },
+          "ruleId": "Reentrancy_10"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "getFirstWithdrawalBonus"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Reentrancy_bonus"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 30,
+                  "startLine": 23
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 7,
+                  "snippet": {
+                    "text": "^0.4.0"
+                  },
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "withdrawReward"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Reentrancy_bonus"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 21,
+                  "startLine": 16
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 19,
+                  "snippet": {
+                    "text": "(success) = recipient.call.value(amountToWithdraw)()"
+                  },
+                  "startLine": 19
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "low-level-calls"
+          },
+          "ruleId": "UncheckedLowCalls_5"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "contract",
+                  "name": "Reentrancy_bonus"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 31,
+                  "startLine": 9
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "variable",
+                  "name": "userBalances"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/reentrancy_bonus.sol"
+                },
+                "region": {
+                  "endLine": 12,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "unused-state"
+          },
+          "ruleId": "Ignore_18"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "Reentrancy_bonus.withdrawReward (/data/reentrancy_bonus.sol#16-21) sends eth to arbitrary user\n\tDangerous calls:\n\t- (success) = recipient.call.value(amountToWithdraw)() (/data/reentrancy_bonus.sol#19)\n"
+              },
+              "id": "AccessControl_19",
+              "name": "AccessControlVulnerability",
+              "shortDescription": {
+                "text": "arbitrary-send"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Reentrancy in Reentrancy_bonus.getFirstWithdrawalBonus (/data/reentrancy_bonus.sol#23-30):\n\tExternal calls:\n\t- withdrawReward(recipient) (/data/reentrancy_bonus.sol#28)\n\tState variables written after the call(s):\n\t- claimedBonus (/data/reentrancy_bonus.sol#29)\n"
+              },
+              "id": "Reentrancy_10",
+              "name": "ReentrancyVulnerability",
+              "shortDescription": {
+                "text": "reentrancy-eth"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Reentrancy_bonus.getFirstWithdrawalBonus (/data/reentrancy_bonus.sol#23-30) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/reentrancy_bonus.sol:\n\t- pragma solidity^0.4.0 (/data/reentrancy_bonus.sol#7): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Low level call in Reentrancy_bonus.withdrawReward (/data/reentrancy_bonus.sol#16-21):\n\t-(success) = recipient.call.value(amountToWithdraw)() /data/reentrancy_bonus.sol#19\n"
+              },
+              "id": "UncheckedLowCalls_5",
+              "name": "UncheckedLowCallsVulnerability",
+              "shortDescription": {
+                "text": "low-level-calls"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Contract 'Reentrancy_bonus' (/data/reentrancy_bonus.sol#9-31) is not in CapWords\n"
+              },
+              "id": "Ignore_12",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "naming-convention"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Reentrancy_bonus.userBalances (/data/reentrancy_bonus.sol#12) is never used in Reentrancy_bonus\n"
+              },
+              "id": "Ignore_18",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "unused-state"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

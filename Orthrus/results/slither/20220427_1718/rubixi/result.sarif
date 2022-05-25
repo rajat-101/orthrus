@@ -1,0 +1,901 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "location": {
+            "uri": "/rubixi.sol"
+          },
+          "sourceLanguage": "Solidity"
+        }
+      ],
+      "results": [
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "addPayout"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 79,
+                  "startLine": 59
+                }
+              }
+            },
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 74,
+                  "snippet": {
+                    "text": "participants[payoutOrder].etherAddress.send(payoutToSend)"
+                  },
+                  "startLine": 74
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "calls-loop"
+          },
+          "ruleId": "DenialService_3"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 83,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 83
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 93,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 93
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 100,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 100
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 113,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 113
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 119,
+                  "snippet": {
+                    "text": "None"
+                  },
+                  "startLine": 119
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "deprecated-standards"
+          },
+          "ruleId": "Ignore_8"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "DynamicPyramid"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 25,
+                  "startLine": 23
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "fallback"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 41,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "collectFeesInEther"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 97,
+                  "startLine": 89
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "collectPercentOfFees"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 105,
+                  "startLine": 99
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "changeOwner"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 110,
+                  "startLine": 108
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "changeMultiplier"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 116,
+                  "startLine": 112
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "changeFeePercentage"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 122,
+                  "startLine": 118
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "currentMultiplier"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 128,
+                  "startLine": 125
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "currentFeePercentage"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 133,
+                  "startLine": 130
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "currentPyramidBalanceApproximately"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 138,
+                  "startLine": 135
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "nextPayoutWhenPyramidBalanceTotalsApproximately"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 142,
+                  "startLine": 140
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "feesSeperateFromBalanceApproximately"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 146,
+                  "startLine": 144
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "totalParticipants"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 150,
+                  "startLine": 148
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "numberOfParticipantsWaitingForPayout"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 154,
+                  "startLine": 152
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "participantDetails"
+                },
+                {
+                  "kind": "contract",
+                  "name": "Rubixi"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 161,
+                  "startLine": 156
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "external-function"
+          },
+          "ruleId": "Ignore_11"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 8,
+                  "snippet": {
+                    "text": "^0.4.15"
+                  },
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "solc-version"
+          },
+          "ruleId": "Ignore_17"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "function",
+                  "name": "DynamicPyramid"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 25,
+                  "startLine": 23
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "parameter",
+                  "name": "_fee"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 59,
+                  "startLine": 59
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "parameter",
+                  "name": "_amt"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 89,
+                  "startLine": 89
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "parameter",
+                  "name": "_pcent"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 99,
+                  "startLine": 99
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "parameter",
+                  "name": "_owner"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 108,
+                  "startLine": 108
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "parameter",
+                  "name": "_mult"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 112,
+                  "startLine": 112
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "parameter",
+                  "name": "_fee"
+                }
+              ],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/rubixi.sol"
+                },
+                "region": {
+                  "endLine": 118,
+                  "startLine": 118
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "naming-convention"
+          },
+          "ruleId": "Ignore_12"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullDescription": {
+            "text": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses."
+          },
+          "informationUri": "https://github.com/crytic/slither",
+          "name": "Slither",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "Rubixi.addPayout has external calls inside a loop:\n\t- participants[payoutOrder].etherAddress.send(payoutToSend) (/data/rubixi.sol#74)\n"
+              },
+              "id": "DenialService_3",
+              "name": "DenialServiceVulnerability",
+              "shortDescription": {
+                "text": "calls-loop"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Deprecated standard detected @ /data/rubixi.sol#83:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n"
+              },
+              "id": "Ignore_8",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "deprecated-standards"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Rubixi.DynamicPyramid (/data/rubixi.sol#23-25) should be declared external\n"
+              },
+              "id": "Ignore_11",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "external-function"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Detected issues with version pragma in /data/rubixi.sol:\n\t- pragma solidity^0.4.15 (/data/rubixi.sol#8): it allows old versions\n"
+              },
+              "id": "Ignore_17",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "solc-version"
+              }
+            },
+            {
+              "fullDescription": {
+                "text": "Function 'Rubixi.DynamicPyramid' (/data/rubixi.sol#23-25) is not in mixedCase\n"
+              },
+              "id": "Ignore_12",
+              "name": "IgnoreVulnerability",
+              "shortDescription": {
+                "text": "naming-convention"
+              }
+            }
+          ],
+          "version": "0.7.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}
